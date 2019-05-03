@@ -63,7 +63,8 @@ ZSH_THEME="sunrise"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git
-	 colored-man-pages)
+	 colored-man-pages
+	 zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -99,4 +100,5 @@ source $ZSH/oh-my-zsh.sh
  alias lm='ls -al | less '
  eval $(thefuck --alias)
  # add z lua 
- alias cc='clang'
+ alias cc='clang -Wall'
+ alias py='python3'
