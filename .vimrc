@@ -23,10 +23,10 @@ set nu
  Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 "
 " " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
- Plug 'fatih/vim-go', { 'tag': '*' }
+" Plug 'fatih/vim-go', { 'tag': '*' }
 "
 " " Plugin options
- Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
+" Plug 'nsf/gocode', { 'tag': 'v.20150303', 'rtp': 'vim' }
 "
 " " Plugin outside ~/.vim/plugged with post-update hook
  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -35,5 +35,8 @@ set nu
  Plug '~/my-prototype-plugin'
 "
  Plug 'Valloric/YouCompleteMe'
+ "添加rust语言支持
+ Plug 'rust-lang/rust.vim'
 " " Initialize plugin system
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
  call plug#end()
