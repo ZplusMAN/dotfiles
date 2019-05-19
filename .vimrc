@@ -1,4 +1,3 @@
-set nu
 " Specify a directory for plugins
 " " - For Neovim: ~/.local/share/nvim/plugged
 " " - Avoid using standard Vim directory names like 'plugin'
@@ -36,7 +35,31 @@ set nu
 "
  Plug 'Valloric/YouCompleteMe'
  "添加rust语言支持
- Plug 'rust-lang/rust.vim'
+ "Plug 'rust-lang/rust.vim'
 " " Initialize plugin system
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
- call plug#end()
+"Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'Yggdroot/indentLine'
+"Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive'
+"Plug 'makerj/vim-pdf'
+Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'JamshedVesuna/vim-markdown-preview'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/syntastic'
+Plug 'vim-scripts/candy.vim'
+Plug 'yianwillis/vimcdoc'
+Plug 'airblade/vim-gitgutter'
+"Plug 'jeaye/color_coded'
+"Plug 'w0rp/ale'
+call plug#end()
+ set showcmd
+ set cursorline
+ syntax on
+ set t_Co=256
+ filetype indent on
+ set encoding=utf-8 
+ set nu
+ set autoindent
+ set incsearch
