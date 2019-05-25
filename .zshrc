@@ -102,3 +102,6 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 source ~/.zplug/init.zsh
 
 alias py="python3"
+alias vi="nvim"
+
+
