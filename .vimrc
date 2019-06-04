@@ -38,7 +38,6 @@
  "添加rust语言支持
  "Plug 'rust-lang/rust.vim'
 " " Initialize plugin system
-"Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'Yggdroot/indentLine'
@@ -98,7 +97,7 @@ call plug#end()
  let g:rbpt_max = 16
  let g:rbpt_loadcmd_toggle = 0
  syntax enable
- set background=light
+ set background=dark
  colorscheme solarized
  autocmd FileType json syntax match Comment +\/\/.\+$+
  inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
