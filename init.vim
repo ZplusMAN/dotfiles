@@ -53,7 +53,7 @@ Plug 'scrooloose/syntastic'
 Plug 'yianwillis/vimcdoc'
 Plug 'airblade/vim-gitgutter'
 "Plug 'jeaye/color_coded'
-"Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 "Plug 'tpope/vim-fugitive'
 "Plug 'Chiel92/vim-autoformat'
 "Plug 'lfv89/vim-interestingwords'
@@ -61,7 +61,10 @@ Plug 'airblade/vim-gitgutter'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 Plug 'kshenoy/vim-signature'
 "Plug 'kien/rainbow_parentheses.vim'
+Plug 'luochen1990/rainbow'
 Plug 'micha/vim-colors-solarized'
+Plug 'plasticboy/vim-markdown'
+Plug 'vimwiki/vimwiki'
 call plug#end()
  set showcmd
  set cursorline
@@ -98,7 +101,7 @@ call plug#end()
  let g:rbpt_max = 16
  let g:rbpt_loadcmd_toggle = 0
  syntax enable
- set background=dark 	 
+ set background=dark  	 
  colorscheme solarized
  autocmd FileType json syntax match Comment +\/\/.\+$+
  inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -118,3 +121,4 @@ call plug#end()
  set mouse=a
  set foldcolumn=1
 "let g:molokai_original = 1
+ let g:rainbow_active = 1
