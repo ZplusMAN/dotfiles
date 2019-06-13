@@ -101,7 +101,7 @@ call plug#end()
  let g:rbpt_max = 16
  let g:rbpt_loadcmd_toggle = 0
  syntax enable
- set background=dark  	 
+ set background=light   	 
  colorscheme solarized
  autocmd FileType json syntax match Comment +\/\/.\+$+
  inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -122,3 +122,4 @@ call plug#end()
  set foldcolumn=1
 "let g:molokai_original = 1
  let g:rainbow_active = 1
+ autocmd CursorHold * silent call CocActionAsync('highlight')
