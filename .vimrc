@@ -12,12 +12,12 @@
  Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 "
 " " Multiple Plug commands can be written in a single line using | separators
- Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+"Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 "
+Plug 'sbdchd/neoformat'
 " " On-demand loading
  Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
  Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
- Plug 'fatih/molokai'
 "
 " " Using a non-master branch
 " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
@@ -32,22 +32,22 @@
  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "
 " " Unmanaged plugin (manually installed and updated)
- Plug '~/my-prototype-plugin'
+"Plug '~/my-prototype-plugin'
 "
 " Plug 'Valloric/YouCompleteMe'
  "添加rust语言支持
  "Plug 'rust-lang/rust.vim'
 " " Initialize plugin system
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'Yggdroot/indentLine'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+"Plug 'Yggdroot/indentLine'
 "Plug 'scrooloose/syntastic'
-Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-fugitive'
 "Plug 'makerj/vim-pdf'
 "Plug 'dracula/vim', { 'as': 'dracula' }
 " Plug 'JamshedVesuna/vim-markdown-preview'
-Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/syntastic'
+"Plug 'tpope/vim-fugitive'
+"Plug 'scrooloose/syntastic'
 "Plug 'vim-scripts/candy.vim'
 Plug 'yianwillis/vimcdoc'
 Plug 'airblade/vim-gitgutter'
@@ -58,9 +58,13 @@ Plug 'airblade/vim-gitgutter'
 "Plug 'lfv89/vim-interestingwords'
 " " Or install latest release tag
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
-Plug 'kshenoy/vim-signature'
+"Plug 'kshenoy/vim-signature'
 "Plug 'kien/rainbow_parentheses.vim'
-Plug 'micha/vim-colors-solarized'
+Plug 'luochen1990/rainbow'
+"Plug 'micha/vim-colors-solarized'
+"Plug 'plasticboy/vim-markdown'
+Plug 'vimwiki/vimwiki'
+Plug 'vim-perl/vim-perl', { 'for': 'perl', 'do': 'make clean carp dancer highlight-all-pragmas moose test-more try-tiny' }
 call plug#end()
  set showcmd
  set cursorline
@@ -97,8 +101,8 @@ call plug#end()
  let g:rbpt_max = 16
  let g:rbpt_loadcmd_toggle = 0
  syntax enable
- set background=light
- colorscheme solarized
+ set background=dark     	 
+ "colorscheme solarized
  autocmd FileType json syntax match Comment +\/\/.\+$+
  inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
  inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -117,3 +121,5 @@ call plug#end()
  set mouse=a
  set foldcolumn=1
 "let g:molokai_original = 1
+ let g:rainbow_active = 1
+ autocmd CursorHold * silent call CocActionAsync('highlight')
