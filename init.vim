@@ -6,20 +6,18 @@
 " " Make sure you use single quotes
 "
 " " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
- Plug 'junegunn/vim-easy-align'
+"Plug 'junegunn/vim-easy-align'
 "
 " " Any valid git URL is allowed
- Plug 'https://github.com/junegunn/vim-github-dashboard.git'
+" Plug 'https://github.com/junegunn/vim-github-dashboard.git'
 "
 " " Multiple Plug commands can be written in a single line using | separators
- Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 "
-Plug 'sbdchd/neoformat'
+"Plug 'sbdchd/neoformat'
 " " On-demand loading
  Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
- Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
- Plug 'fatih/molokai'
-"
+" Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 " " Using a non-master branch
 " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 "
@@ -33,38 +31,41 @@ Plug 'sbdchd/neoformat'
  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 "
 " " Unmanaged plugin (manually installed and updated)
- Plug '~/my-prototype-plugin'
+" Plug '~/my-prototype-plugin'
 "
 " Plug 'Valloric/YouCompleteMe'
  "添加rust语言支持
  "Plug 'rust-lang/rust.vim'
 " " Initialize plugin system
 Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'Yggdroot/indentLine'
+"Plug 'vim-airline/vim-airline-themes'
+"Plug 'Yggdroot/indentLine'
 "Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
-"Plug 'makerj/vim-pdf'
-"Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'dracula/vim', { 'as': 'dracula' }
 " Plug 'JamshedVesuna/vim-markdown-preview'
-Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/syntastic'
+"Plug 'tpope/vim-fugitive'
+"Plug 'scrooloose/syntastic'
 "Plug 'vim-scripts/candy.vim'
 Plug 'yianwillis/vimcdoc'
 Plug 'airblade/vim-gitgutter'
 "Plug 'jeaye/color_coded'
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
 "Plug 'tpope/vim-fugitive'
 "Plug 'Chiel92/vim-autoformat'
 "Plug 'lfv89/vim-interestingwords'
 " " Or install latest release tag
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
-Plug 'kshenoy/vim-signature'
+"Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
+"Plug 'kshenoy/vim-signature'
 "Plug 'kien/rainbow_parentheses.vim'
 Plug 'luochen1990/rainbow'
-Plug 'micha/vim-colors-solarized'
-Plug 'plasticboy/vim-markdown'
+"Plug 'micha/vim-colors-solarized'
+"Plug 'plasticboy/vim-markdown'
 Plug 'vimwiki/vimwiki'
+"Plug 'vim-perl/vim-perl', { 'for': 'perl', 'do': 'make clean carp dancer highlight-all-pragmas moose test-more try-tiny' }
+Plug 'konfekt/fastfold'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 call plug#end()
  set showcmd
  set cursorline
@@ -101,25 +102,16 @@ call plug#end()
  let g:rbpt_max = 16
  let g:rbpt_loadcmd_toggle = 0
  syntax enable
- set background=light   	 
- colorscheme solarized
+ "colorscheme solarized
  autocmd FileType json syntax match Comment +\/\/.\+$+
- inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
- inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
- inoremap <silent><expr> <TAB>
-			 \ pumvisible() ? coc#_select_confirm() :
-			 \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-			 \ <SID>check_back_space() ? "\<TAB>" :
-			 \ coc#refresh()
 
  function! s:check_back_space() abort
 	 let col = col('.') - 1
 	 return !col || getline('.')[col - 1]  =~# '\s'
  endfunction
 
- let g:coc_snippet_next = '<tab>'
  set mouse=a
  set foldcolumn=1
-"let g:molokai_original = 1
  let g:rainbow_active = 1
- autocmd CursorHold * silent call CocActionAsync('highlight')
+ nmap zuz <Plug>(FastFoldUpdate)
+ set ignorecase
