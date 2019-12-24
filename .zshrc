@@ -100,3 +100,4 @@ source $ZSH/oh-my-zsh.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 alias vi='nvim'
+eval "$(lua ~/github/z.lua/z.lua --init zsh enhanced once echo)"

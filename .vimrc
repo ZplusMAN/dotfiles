@@ -1,4 +1,4 @@
-" Specify a directory for plugins
+" SPECIFY a directory for plugins
 " " - For Neovim: ~/.local/share/nvim/plugged
 " " - Avoid using standard Vim directory names like 'plugin'
  call plug#begin('~/.vim/plugged')
@@ -61,7 +61,7 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'do': './install.sh'}
 "Plug 'kshenoy/vim-signature'
 "Plug 'kien/rainbow_parentheses.vim'
 Plug 'luochen1990/rainbow'
-"Plug 'micha/vim-colors-solarized'
+Plug 'micha/vim-colors-solarized'
 "Plug 'plasticboy/vim-markdown'
 Plug 'vimwiki/vimwiki'
 Plug 'vim-perl/vim-perl', { 'for': 'perl', 'do': 'make clean carp dancer highlight-all-pragmas moose test-more try-tiny' }
@@ -101,7 +101,7 @@ call plug#end()
  let g:rbpt_max = 16
  let g:rbpt_loadcmd_toggle = 0
  syntax enable
- set background=dark     	 
+ set background=light 
  "colorscheme solarized
  autocmd FileType json syntax match Comment +\/\/.\+$+
  inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
